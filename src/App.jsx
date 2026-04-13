@@ -48,18 +48,29 @@ function App() {
       <main className="container">
         {/* Hero Section */}
         <section className="hero-section">
+          <div className="hero-badge">
+            <span className="badge-dot"></span>
+            VERSION 1.0 ESTABLE • DEPLOY READY
+          </div>
           <h1 className="hero-title">
             Software de <br />
             <span className="gradient-text">Máxima Potencia</span>
           </h1>
           <p className="hero-subtitle">
-            Arquitectura distribuida con latencia cero. Diseñado para ingenieros que exigen precisión quirúrgica en su flujo de trabajo diario.
+            La infraestructura definitiva para el desarrollo moderno. Arquitectura distribuida con latencia cero, diseñada para ingenieros que exigen precisión quirúrgica.
           </p>
           
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-            <a href="/download/software.exe" className="btn-download">
-              Descargar Software v1.0
-            </a>
+          <div className="hero-cta-group">
+            <div className="btn-glow-container">
+              <a href="/download/software.exe" className="btn-download">
+                Descargar Software
+              </a>
+            </div>
+            <a href="#docs" className="btn-secondary">Ver Documentación</a>
+          </div>
+
+          <div className="os-compatibility-wrapper">
+            <span className="os-label">Optimizado para:</span>
             <div className="os-compatibility">
               {/* Windows Icon */}
               <svg className="os-icon windows" viewBox="0 0 24 24">
@@ -203,6 +214,7 @@ function App() {
         {/* Feature Showcase Section - Side-by-Side */}
         <section className="feature-showcase">
           <div className="showcase-row">
+            <div className="tech-corner" style={{ top: 0, left: 0, borderRight: 'none', borderBottom: 'none' }}></div>
             <div className="showcase-image-wrap">
               <img 
                 src="https://img.freepik.com/vector-premium/ilustracion-dibujos-animados-maquina-fondo-azul_1217673-13281.jpg" 
@@ -210,17 +222,27 @@ function App() {
               />
             </div>
             <div className="showcase-content">
-              <span className="feature-label">DEPLOY_READY // 04</span>
-              <h2 style={{ fontSize: '2.2rem', marginBottom: '1.2rem' }}>Compilación en Tiempo Real</h2>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+              <div className="showcase-header">
+                <svg className="showcase-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span className="feature-label">DEPLOY_READY // 04</span>
+              </div>
+              <h2>Compilación en Tiempo Real</h2>
+              <p>
                 Nuestro entorno de ejecución procesa millones de líneas de código por segundo. 
                 Eliminamos los tiempos de espera mediante un sistema de caché de objetos distribuido 
                 que solo reconstruye los módulos modificados.
               </p>
+              <div className="showcase-metadata">
+                <div className="meta-tag"><span>BUILD_TIME</span><strong>&lt; 100ms</strong></div>
+                <div className="meta-tag"><span>SYNC</span><strong>ACTIVE</strong></div>
+              </div>
             </div>
           </div>
 
           <div className="showcase-row">
+            <div className="tech-corner" style={{ top: 0, right: 0, borderLeft: 'none', borderBottom: 'none' }}></div>
             <div className="showcase-image-wrap">
               <img 
                 src="https://img.freepik.com/fotos-premium/grupo-trabajadores-cascos-coloridos-que-simbolizan-trabajo-equipo-dedicacion-fabrica_875722-4219.jpg" 
@@ -228,12 +250,22 @@ function App() {
               />
             </div>
             <div className="showcase-content">
-              <span className="feature-label">DATA_ANALYSIS // 05</span>
-              <h2 style={{ fontSize: '2.2rem', marginBottom: '1.2rem' }}>Métricas Avanzadas</h2>
-              <p style={{ color: 'var(--text-secondary)' }}>
+              <div className="showcase-header">
+                <svg className="showcase-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 3v18h18"/>
+                  <path d="M18 9l-5 5-2-2-4 4"/>
+                </svg>
+                <span className="feature-label">DATA_ANALYSIS // 05</span>
+              </div>
+              <h2>Métricas Avanzadas</h2>
+              <p>
                 Visualiza el rendimiento de tu infraestructura con precisión de microsegundos. 
                 Nuestros dashboards integrados ofrecen telemetría de bajo nivel directamente desde el kernel.
               </p>
+              <div className="showcase-metadata">
+                <div className="meta-tag"><span>TELEMETRY</span><strong>KERNEL_LEVEL</strong></div>
+                <div className="meta-tag"><span>PRECISION</span><strong>&mu;s</strong></div>
+              </div>
             </div>
           </div>
         </section>
@@ -303,7 +335,7 @@ function App() {
             <div className="launch-content">
               <div className="tech-corner" style={{ top: 0, left: 0, borderRight: 'none', borderBottom: 'none', opacity: 0.5 }}></div>
               <span className="feature-label">DEPLOYMENT_STATUS // Q4_2026</span>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-1px' }}>Próximo Despliegue</h2>
+              <h2 className="launch-title">Próximo Despliegue</h2>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
                 Estamos afinando los últimos protocolos de optimización de kernel. 
                 La versión estable 1.0 estará disponible para despliegue masivo en diciembre de 2026.
@@ -331,15 +363,17 @@ function App() {
                 </div>
               </div>
 
-              <div style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-                <span style={{ fontSize: '0.9rem', fontWeight: 600, letterSpacing: '1px' }}>RESERVAR ACCESO ANTICIPADO</span>
-                <button className="btn-download" style={{ padding: '0.6rem 1.2rem', fontSize: '0.8rem' }}>Notificarme</button>
+              <div className="launch-actions">
+                <div className="launch-info-tag">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>RESERVAR ACCESO ANTICIPADO</span>
+                </div>
+                <button className="btn-download notify-btn">Notificarme</button>
               </div>
             </div>
             
