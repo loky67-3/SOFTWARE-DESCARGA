@@ -396,9 +396,9 @@ function App() {
             <span className="gradient-text" style={{ fontSize: '0.9rem', textTransform: 'uppercase' }}>
               Lead Systems Architect
             </span>
-            <h2 style={{ fontSize: '3rem', margin: '0.5rem 0 1.5rem' }}>Tu Nombre</h2>
+            <h2 style={{ fontSize: '3rem', margin: '0.5rem 0 1.5rem' }}>Carlos</h2>
             <p>
-              Ingeniero de Software con una visión centrada en la eficiencia radical. 
+              Software con una visión centrada en la eficiencia radical. 
               He dedicado mi carrera a perfeccionar la interacción entre el hardware de alto rendimiento 
               y las capas de abstracción modernas.
             </p>
@@ -431,7 +431,7 @@ function App() {
         </section>
 
         <footer style={{ padding: '60px 0', textAlign: 'center', opacity: 0.4, fontSize: '0.9rem' }}>
-          <p>© 2024 Tu Marca de Software. Inspirado por la estética de Vite.</p>
+          <p>© 2026  de Software. Inspirado por la estética de Diseño.</p>
         </footer>
       </main>
     </div>
