@@ -53,7 +53,7 @@ function App() {
           <div className="stat-item"><h4>∞</h4><p>Escalabilidad</p></div>
         </section>
 
-        {/* Feature Showcase Section - Ajustado a 2 Columnas */}
+        {/* Feature Showcase Section - Side-by-Side */}
         <section className="feature-showcase">
           <div className="showcase-row">
             <div className="showcase-image-wrap">
