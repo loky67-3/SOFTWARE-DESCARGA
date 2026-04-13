@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import whatsappImg from './assets/whatsapp.png'
+import whatsappImg from './assets/perfil.jpeg'
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -90,7 +90,7 @@ function App() {
           <div className="showcase-row">
             <div className="showcase-image-wrap">
               <img 
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" 
+                src="https://img.freepik.com/vector-premium/ilustracion-dibujos-animados-maquina-fondo-azul_1217673-13281.jpg" 
                 alt="Código Limpio" className="showcase-img" 
               />
             </div>
@@ -108,7 +108,7 @@ function App() {
           <div className="showcase-row">
             <div className="showcase-image-wrap">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
+                src="https://img.freepik.com/fotos-premium/grupo-trabajadores-cascos-coloridos-que-simbolizan-trabajo-equipo-dedicacion-fabrica_875722-4219.jpg" 
                 alt="Análisis de Datos" className="showcase-img" 
               />
             </div>
@@ -230,7 +230,7 @@ function App() {
             
             <div className="launch-image-wrap">
               <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" 
+                src="https://img.freepik.com/premium-photo/cyberpunk-cyborg-robot-futuristic-portrait-3d-rendering_691560-3843.jpg?w=740" 
                 alt="Ingeniería de Software" 
                 className="launch-img" 
               />
