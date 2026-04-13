@@ -285,6 +285,35 @@ p {
   margin: 80px 0;
 }
 
+.showcase-row {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.showcase-row:hover {
+  border-color: var(--brand-color);
+  transform: translateY(-5px);
+}
+
+.showcase-image-wrap {
+  width: 100%;
+  height: 280px; /* Imagen achicada para mejor visualización */
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
 .showcase-content {
   padding: 3rem;
   display: flex;
