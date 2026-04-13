@@ -13,21 +13,35 @@ function App() {
             <span className="gradient-text">Máxima Potencia</span>
           </h1>
           <p className="hero-subtitle">
-            La herramienta definitiva diseñada para optimizar tu flujo de trabajo. 
-            Velocidad instantánea, interfaz minimalista y arquitectura de última generación.
+            Arquitectura distribuida con latencia cero. Diseñado para ingenieros que exigen precisión quirúrgica en su flujo de trabajo diario.
           </p>
           
-          <a href="/download/software.exe" className="btn-download">
-            Descargar Software v1.0
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+            <a href="/download/software.exe" className="btn-download">
+              Descargar Software v1.0
+            </a>
+            <div className="os-compatibility">
+              <svg className="os-icon" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.401h-13.051M0 12.6h9.75v9.451L0 20.699m10.949-8.099H24V24l-13.051-1.949"/></svg>
+              <svg className="os-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.31-.79-1.53 0-2.01.79-3.31.82-1.33.03-2.31-1.32-3.14-2.52C4.25 17 2.94 12.45 4.54 9.65c.8-1.39 2.23-2.27 3.81-2.3 1.2-.02 2.32.81 3.05.81s2.12-1 3.53-.86c.59.02 2.26.24 3.33 1.81-.09.05-1.99 1.15-1.97 3.45.02 2.8 2.41 3.75 2.42 3.76-.02.05-.38 1.28-1.27 2.58zM15.47 5.38c.63-.77 1.05-1.83.93-2.88-.91.04-2.01.61-2.67 1.38-.59.68-1.11 1.76-.97 2.79.99.08 1.99-.48 2.71-1.29z"/></svg>
+              <svg className="os-icon" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path d="M12 6c-3.309 0-6 2.691-6 6s2.691 6 6 6 6-2.691 6-6-2.691-6-6-6zm0 10c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"/></svg>
+            </div>
+          </div>
 
           <div className="preview-container">
             <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" 
+              src="https://www.impacta.com.br/blog/wp-content/uploads/2020/04/308682-o-que-e-a-robotica-industrial-entenda-tudo-sobre-a-area.jpg" 
               alt="Software Dashboard Preview" 
               className="preview-img" 
             />
           </div>
+        </section>
+
+        {/* Technical Stats Section */}
+        <section className="tech-stats">
+          <div className="stat-item"><h4>0.2ms</h4><p>Latencia Base</p></div>
+          <div className="stat-item"><h4>40MB</h4><p>Consumo RAM</p></div>
+          <div className="stat-item"><h4>128bit</h4><p>Cifrado E2E</p></div>
+          <div className="stat-item"><h4>∞</h4><p>Escalabilidad</p></div>
         </section>
 
         {/* Galería de Imágenes de Alta Calidad */}
@@ -50,39 +64,59 @@ function App() {
         <section className="features-grid">
           <div className="glass-card">
             <span className="card-icon">⚡</span>
-            <h3>¿Cómo funciona?</h3>
-            <p>Utiliza un motor de renderizado asíncrono que garantiza que tu sistema nunca se detenga, sin importar la carga de trabajo.</p>
+            <h3>Motor Quantum-Core</h3>
+            <p>Implementación de algoritmos de bajo nivel en Rust para garantizar un procesamiento de hilos paralelo sin bloqueos.</p>
           </div>
           <div className="glass-card">
             <span className="card-icon">🛠️</span>
-            <h3>Configuración Zero</h3>
-            <p>Descarga, ejecuta y empieza a producir. No requiere dependencias externas ni configuraciones complicadas en el registro.</p>
+            <h3>Pipeline Automatizado</h3>
+            <p>Detección automática de hardware y optimización de registros en tiempo real. Configuración semántica inteligente.</p>
           </div>
           <div className="glass-card">
             <span className="card-icon">🔒</span>
-            <h3>Seguridad Total</h3>
+            <h3>Protocolo Shard-Shield</h3>
             <p>Encriptación de grado militar para proteger tus datos y asegurar que tu software sea siempre privado y seguro.</p>
           </div>
         </section>
 
         {/* Sección del Autor */}
-        <section className="author-card">
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" 
-            alt="El Desarrollador" 
-            className="author-img" 
-          />
-          <div className="author-info">
+        <section className="author-split-section">
+          <div className="author-image-side">
+            <img 
+              src="https://images.unsplash.com/photo-1552061376-121198535c25?q=80&w=1000&auto=format&fit=crop" 
+              alt="Arquitecto de Sistemas" 
+            />
+          </div>
+          <div className="author-content-side">
             <span className="gradient-text" style={{ fontSize: '0.9rem', textTransform: 'uppercase' }}>
-              El Desarrollador
+              Lead Systems Architect
             </span>
-            <h2>Diseñado por Tu Nombre</h2>
+            <h2 style={{ fontSize: '3rem', margin: '0.5rem 0 1.5rem' }}>Tu Nombre</h2>
             <p>
-              Soy un ingeniero de software apasionado por crear herramientas que rompan los límites 
-              de lo convencional. Este proyecto nació de la necesidad de tener una solución 
-              más rápida y elegante para la comunidad. Cada detalle ha sido pulido para ofrecer 
-              la mejor experiencia de usuario posible.
+              Ingeniero de Software con una visión centrada en la eficiencia radical. 
+              He dedicado mi carrera a perfeccionar la interacción entre el hardware de alto rendimiento 
+              y las capas de abstracción modernas.
             </p>
+            <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
+              Este proyecto no es solo una herramienta, es un manifiesto técnico. 
+              Cada microservicio y cada línea de código ha sido auditada para 
+              ofrecer una estabilidad del 99.9% en entornos de producción críticos.
+            </p>
+            
+            <div className="author-socials">
+              <a href="#" className="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" className="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+
+            <div className="author-cta">
+              <button className="btn-download" style={{ padding: '0.8rem 1.5rem', fontSize: '0.9rem' }}>
+                Ver Portafolio Técnico
+              </button>
+            </div>
           </div>
         </section>
 
