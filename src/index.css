@@ -282,8 +282,9 @@ p {
   .hero-title { font-size: 3rem; }
   .author-split-section { grid-template-columns: 1fr; }
   .author-content-side { padding: 3rem 2rem; border-left: none; border-top: 1px solid var(--border-color); }
-  .showcase-row { grid-template-columns: 1fr; min-height: auto; }
-  .showcase-content { border-right: none; border-bottom: 1px solid var(--border-color); padding: 2rem; }
-  .showcase-image-wrap { height: 300px; }
+  .showcase-row { grid-template-columns: 1fr !important; min-height: auto; }
+  .showcase-content { border-right: none; border-bottom: 1px solid var(--border-color); padding: 3rem 1.5rem; }
+  .showcase-image-wrap { height: 350px; }
   .features-grid { grid-template-columns: 1fr; border-right: 1px solid var(--border-color); }
+  .feature-item { aspect-ratio: auto; padding: 3rem 1.5rem; }
 }
