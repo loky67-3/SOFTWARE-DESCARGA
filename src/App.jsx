@@ -4,8 +4,12 @@ function App() {
   return (
     <div className="app-wrapper">
       <div className="bg-glow"></div>
+      <div className="bg-noise"></div>
       
       <main className="container">
+        <div className="web-line" style={{ top: '20%', transform: 'rotate(-5deg)' }}></div>
+        <div className="web-line" style={{ top: '45%', transform: 'rotate(3deg)', opacity: 0.5 }}></div>
+
         {/* Hero Section */}
         <section className="hero-section">
           <h1 className="hero-title">
@@ -28,6 +32,10 @@ function App() {
           </div>
 
           <div className="preview-container">
+            <div className="tech-corner" style={{ top: -1, left: -1, borderRight: 'none', borderBottom: 'none' }}></div>
+            <div className="tech-corner" style={{ top: -1, right: -1, borderLeft: 'none', borderBottom: 'none' }}></div>
+            <div className="tech-corner" style={{ bottom: -1, left: -1, borderRight: 'none', borderTop: 'none' }}></div>
+            <div className="tech-corner" style={{ bottom: -1, right: -1, borderLeft: 'none', borderTop: 'none' }}></div>
             <div className="preview-overlay">
               <h4>System Live</h4>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1.2rem' }}>
