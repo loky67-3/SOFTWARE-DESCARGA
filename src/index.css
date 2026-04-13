@@ -2,10 +2,10 @@
 
 :root {
   --bg-color: #fdfaf6; /* Crema/Café muy claro, limpio y lizo */
-  --text-primary: #d15416; /* Café chocolate profundo para lectura clara */
-  --text-secondary: #523d39;
+  --text-primary: #1a1614; /* Casi negro/Café profundo para máxima legibilidad */
+  --text-secondary: #5d544f; /* Gris café suave para texto de apoyo */
   --brand-color: #f58516; /* Café ambarino/Dorado */
-  --brand-gradient: linear-gradient(135deg, #a67c52 0%, #8d6e63 100%);
+  --brand-gradient: linear-gradient(135deg, #d15416 0%, #f58516 100%);
   --glass-bg: rgba(255, 255, 255, 0.74);
   --border-color: rgba(48, 47, 46, 0.15);
 }
@@ -58,14 +58,17 @@ body {
 
 h1,
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
+  color: var(--text-primary);
+  text-wrap: balance;
+  letter-spacing: -0.03em;
 }
 
 p {
   margin: 0;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
 }
 
 /* Marcadores técnicos estilo CAD */
@@ -84,20 +87,22 @@ p {
 
 .gradient-text {
   background: var(--brand-gradient);
-  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
 
 .hero-title {
   font-size: 4.5rem;
-  line-height: 1.1;
+  line-height: 1;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto 2.5rem;
@@ -206,10 +211,13 @@ p {
   fill: #0078D4; /* Color oficial de Windows */
 }
 .os-icon.apple {
-  fill: #555555; /* Gris elegante para Apple */
+  fill: #000000; /* Negro oficial Apple */
 }
 .os-icon.linux {
-  fill: #FCC624; /* Amarillo característico de Linux (Tux) */
+  fill: #333333; /* Gris oscuro para el pingüino */
+}
+.os-icon.android {
+  fill: #3DDC84; /* Verde Android oficial */
 }
 
 /* Stats Section */
@@ -278,6 +286,15 @@ p {
   background: rgba(166, 124, 82, 0.03);
 }
 
+.feature-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--brand-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
 .author-image-side img {
   width: 320px;
   height: 320px;
@@ -300,7 +317,7 @@ p {
 }
 
 .author-content-side {
-  padding: 5rem;
+  padding: 4rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
