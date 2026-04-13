@@ -32,8 +32,7 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Patrón de rejilla sutil para el fondo */
+  -moz-osx-font-smoothing: grayscale;  /* Patrón de rejilla sutil para el fondo */
   background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
   background-size: 40px 40px;
 }
@@ -889,4 +888,90 @@ p {
   .timer-val {
     font-size: 1.5rem;
   }
+}
+
+/* Download Center Styles */
+.download-center-section {
+  margin: 100px 0;
+  padding: 0 2rem;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.os-download-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 32px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.os-download-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.06);
+  border-color: var(--brand-color);
+}
+
+.os-icon-wrap {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.os-icon-wrap.windows { color: #00a4ef; }
+.os-icon-wrap.apple, .os-icon-wrap.ios { color: #000; }
+.os-icon-wrap.linux { color: #333; }
+.os-icon-wrap.android { color: #3DDC84; }
+
+.os-icon-wrap svg { width: 100%; height: 100%; }
+
+.os-download-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.os-download-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.os-specs {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brand-color);
+  margin-bottom: 2rem;
+  background: rgba(79, 70, 229, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.btn-download.full-width {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .download-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .download-grid { grid-template-columns: 1fr; }
 }

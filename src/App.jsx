@@ -329,6 +329,85 @@ function App() {
           </div>
         </section>
 
+        {/* Multi-platform Download Center */}
+        <section className="download-center-section">
+          <div className="section-header" style={{ marginBottom: '4rem', textAlign: 'center' }}>
+            <span className="feature-label">BINARY_RELEASES // VERSION_1.0</span>
+            <h2 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>Descargas Oficiales</h2>
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
+              Selecciona tu sistema operativo para obtener el instalador optimizado. 
+              Nuestros binarios están firmados digitalmente para garantizar la máxima seguridad.
+            </p>
+          </div>
+
+          <div className="download-grid">
+            {/* Windows Card */}
+            <div className="os-download-card">
+              <div className="os-icon-wrap windows">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h11.411v11.411H0V0zm12.589 0H24v11.411h-11.411V0zM0 12.589h11.411V24H0v-11.411zm12.589 0H24V24h-11.411v-11.411z"/>
+                </svg>
+              </div>
+              <h3>Windows</h3>
+              <p>Optimizada para Workstations de alto rendimiento y servidores Windows Server 2022+.</p>
+              <div className="os-specs"><span>ARCH: x64 / ARM64</span></div>
+              <button className="btn-download full-width">Descargar .exe</button>
+            </div>
+
+            {/* macOS Card */}
+            <div className="os-download-card">
+              <div className="os-icon-wrap apple">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.51 12.09 1.005 1.454 2.202 3.09 3.786 3.03 1.52-.06 2.09-.983 3.935-.983 1.84 0 2.363.983 3.96.954 1.622-.03 2.661-1.481 3.659-2.937 1.159-1.694 1.64-3.332 1.667-3.415-.033-.015-3.204-1.233-3.236-4.822-.033-2.992 2.442-4.426 2.562-4.495-1.398-2.052-3.543-2.28-4.303-2.33-1.896-.152-3.253 1.04-3.619 1.04zm.091-2.12c.807-1.005 1.347-2.394 1.201-3.776-1.167.045-2.585.787-3.418 1.765-.747.857-1.401 2.274-1.226 3.613 1.294.098 2.628-.614 3.443-1.602z"/>
+                </svg>
+              </div>
+              <h3>macOS</h3>
+              <p>Soporte nativo para Apple Silicon (M1/M2/M3) e Intel con integración total de GPU.</p>
+              <div className="os-specs"><span>ARCH: Universal</span></div>
+              <button className="btn-download full-width">Descargar .dmg</button>
+            </div>
+
+            {/* Linux Card */}
+            <div className="os-download-card">
+              <div className="os-icon-wrap linux">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2s.146 0 .354.012c.208.012.513.037.88.082.734.09 1.71.253 2.71.528 1 .275 2 .66 2.82 1.163.82.502 1.41 1.143 1.66 1.93.25.787.17 1.68-.21 2.52-.38.84-1.01 1.65-1.76 2.36-.75.71-1.61 1.32-2.46 1.83-.85.51-1.66.92-2.31 1.22-.65.3-1.12.49-1.4.61V22h-1v-6.745c-.28-.12-.75-.31-1.4-.61-.65-.3-1.46-.71-2.31-1.22-.85-.51-1.71-1.12-2.46-1.83-.75-.71-1.38-1.52-1.76-2.36-.38-.84-.46-1.733-.21-2.52.25-.787.84-1.428 1.66-1.93.82-.503 1.82-.888 2.82-1.163 1-.275 1.976-.438 2.71-.528.367-.045.672-.07.88-.082C11.854 2 12 2 12 2z"/>
+                </svg>
+              </div>
+              <h3>Linux</h3>
+              <p>Binarios estables probados en Debian, Arch, Fedora y RHEL con kernel 5.15+.</p>
+              <div className="os-specs"><span>ARCH: AMD64 / AppImage</span></div>
+              <button className="btn-download full-width">Descargar .bin</button>
+            </div>
+
+            {/* Android Card */}
+            <div className="os-download-card">
+              <div className="os-icon-wrap android">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.341c-.551 0-.999-.448-.999-1s.448-.999.999-.999c.551 0 .999.448.999.999s-.448 1-.999 1m-11.046 0c-.551 0-.999-.448-.999-1s.448-.999.999-.999.999.448.999.999-.448 1-.999 1m11.445-6.021l1.997-3.459a.416.416 0 00-.152-.568.416.416 0 00-.568.152l-2.022 3.503c-1.22-.553-2.585-.866-4.024-.866-1.439 0-2.804.313-4.024.866L6.103 4.446a.416.416 0 00-.568-.152.416.416 0 00-.152.568l1.997 3.459C4.383 10.863 3 13.008 3 15.422h18c0-2.414-1.383-4.559-3.078-6.102"/>
+                </svg>
+              </div>
+              <h3>Android</h3>
+              <p>Runtime optimizado para dispositivos móviles con Android 12 o superior.</p>
+              <div className="os-specs"><span>ARCH: APK / ARMv8</span></div>
+              <button className="btn-download full-width">Obtener APK</button>
+            </div>
+
+            {/* iOS Card */}
+            <div className="os-download-card">
+              <div className="os-icon-wrap ios">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.51 12.09 1.005 1.454 2.202 3.09 3.786 3.03 1.52-.06 2.09-.983 3.935-.983 1.84 0 2.363.983 3.96.954 1.622-.03 2.661-1.481 3.659-2.937 1.159-1.694 1.64-3.332 1.667-3.415-.033-.015-3.204-1.233-3.236-4.822-.033-2.992 2.442-4.426 2.562-4.495-1.398-2.052-3.543-2.28-4.303-2.33-1.896-.152-3.253 1.04-3.619 1.04zm.091-2.12c.807-1.005 1.347-2.394 1.201-3.776-1.167.045-2.585.787-3.418 1.765-.747.857-1.401 2.274-1.226 3.613 1.294.098 2.628-.614 3.443-1.602z"/>
+                </svg>
+              </div>
+              <h3>iOS</h3>
+              <p>Instalación vía App Store certificada para iPhone y iPadOS 16+.</p>
+              <div className="os-specs"><span>ARCH: Swift Native</span></div>
+              <button className="btn-download full-width">App Store</button>
+            </div>
+          </div>
+        </section>
+
         {/* Lanzamiento Oficial - Ingeniería de Precisión */}
         <section className="launch-section">
           <div className="launch-grid">
