@@ -53,81 +53,44 @@ function App() {
           </div>
         </section>
 
-        {/* Global Ecosystem Section - Multi-category Icons */}
+        {/* Global Ecosystem - Micro Icons */}
         <section className="tech-ecosystem">
-          <span className="feature-label">SYSTEM_RESOURCES // CLASSIFIED_ASSETS</span>
+          <span className="feature-label">RESOURCE_NETWORK // MULTI_CATEGORY</span>
           <div className="tech-grid">
-            {/* Mobile / Celulares */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#6366f1' }} title="Smartphone">
+            {/* Celulares & Tech */}
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#ff3131' }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#8b5cf6' }} title="Tablet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#00d8ff' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#0ea5e9' }} title="Signal">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20h.01"></path><path d="M7 20v-4"></path><path d="M12 20v-8"></path><path d="M17 20V8"></path><path d="M22 20V4"></path></svg>
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#10b981' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path></svg>
             </div>
-            
-            {/* Food / Comida */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#fbbf24' }} title="Coffee">
+
+            {/* Comida */}
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#fbbf24' }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#ef4444' }} title="Pizza">
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#ef4444' }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 11l-5 5"></path><path d="M19 11l-4 4"></path><path d="M12 12l.01 0"></path><path d="M16 16l.01 0"></path><path d="M20 20l.01 0"></path><path d="M21 15l-3-12L3 15h18z"></path></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#f59e0b' }} title="Burger">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12c0-3.3 2.7-6 6-6h8c3.3 0 6 2.7 6 6v1H2v-1z"></path><rect x="2" y="15" width="20" height="3" rx="1"></rect><path d="M2 20c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-1H2v1z"></path></svg>
-            </div>
 
-            {/* Tech / Tecnología */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#3b82f6' }} title="Laptop">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#ec4899' }} title="Camera">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#10b981' }} title="Chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#06b6d4' }} title="Headphones">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
-            </div>
-
-            {/* Clothing / Ropa */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#f43f5e' }} title="Shirt">
+            {/* Ropa */}
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#f43f5e' }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#a855f7' }} title="Sneakers">
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#a855f7' }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12h-8v5c0 .5.5 1 1 1h14c.5 0 1-.5 1-1v-9c0-2-1-3.5-3-4l-5 8z"></path></svg>
             </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#64748b' }} title="Glasses">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="15" r="4"></circle><circle cx="18" cy="15" r="4"></circle><path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2"></path><path d="M2.5 13L5 7c.7-1.3 1.4-2 3-2"></path><path d="M21.5 13L19 7c-.7-1.3-1.4-2-3-2"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#d946ef' }} title="Watch">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.84a2 2 0 0 1-2-1.82l-.35-3.83m.35-10.7l.35-3.83A2 2 0 0 1 9.84 1h4.32a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>
-            </div>
 
-            {/* Extra Tech */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#f97316' }} title="Utensils">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#0ea5e9' }} title="Globe">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#f472b6' }} title="Ice Cream">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 11c0 2.2 1.8 4 4 4s4-1.8 4-4a4 4 0 0 0-8 0z"></path><path d="M11 15v4"></path><path d="M9 19h4"></path><path d="M11 2v2"></path><path d="M11 11v2"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#94a3b8' }} title="Database">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#d946ef' }} title="VR">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"></rect><path d="M7 12h.01"></path><path d="M17 12h.01"></path><path d="M12 7v2"></path><path d="M12 15v2"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#84cc16' }} title="Backpack">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10c0-2.2 1.8-4 4-4h8c2.2 0 4 1.8 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M8 10h8"></path><path d="M8 14h8"></path></svg>
-            </div>
+            {/* Más iconos repetidos o variados para llenar la fila de forma compacta */}
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#6366f1' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+            <div className="tech-icon-wrap" style={{ '--icon-color': '#0ea5e9' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
           </div>
         </section>
+
+        {/* Technical Stats Section */}
 
         {/* Technical Stats Section */}
         <section className="tech-stats">
