@@ -101,11 +101,38 @@ p {
 
 /* Software Preview */
 .preview-container {
+  position: relative;
   margin-top: 4rem;
   border-radius: 20px;
   padding: 8px;
   background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
   box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  background: rgba(5, 5, 6, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-top: 2px solid var(--brand-color);
+  padding: 1.5rem;
+  border-radius: 16px;
+  max-width: 240px;
+  text-align: left;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.preview-overlay h4 {
+  font-size: 0.9rem;
+  color: var(--brand-color);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 .preview-img {

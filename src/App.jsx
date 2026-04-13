@@ -28,6 +28,15 @@ function App() {
           </div>
 
           <div className="preview-container">
+            <div className="preview-overlay">
+              <h4>System Live</h4>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1.2rem' }}>
+                Visualización en tiempo real de la orquestación del kernel y flujo de datos.
+              </p>
+              <button className="btn-download" style={{ padding: '0.5rem 1rem', fontSize: '0.75rem', borderRadius: '8px', width: '100%' }}>
+                Abrir Consola
+              </button>
+            </div>
             <img 
               src="https://www.impacta.com.br/blog/wp-content/uploads/2020/04/308682-o-que-e-a-robotica-industrial-entenda-tudo-sobre-a-area.jpg" 
               alt="Software Dashboard Preview" 
@@ -86,7 +95,7 @@ function App() {
         <section className="author-split-section">
           <div className="author-image-side">
             <img 
-              src="https://img.freepik.com/fotos-premium/brazo-robotico-que-funciona-manera-compleja-sistemas-implementados-prevenir-lesiones_124507-129476.jpg" 
+              src="https://images.unsplash.com/photo-1552061376-121198535c25?q=80&w=1000&auto=format&fit=crop" 
               alt="Arquitecto de Sistemas" 
             />
           </div>
