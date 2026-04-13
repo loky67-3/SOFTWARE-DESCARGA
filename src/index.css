@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
 :root {
-  --bg-color: #050508; /* Negro obsidiana puro */
-  --text-primary: #ebebeb;
-  --text-secondary: rgba(235, 235, 235, 0.6);
-  --brand-color: #ff0055; /* Carmesí Eléctrico */
-  --brand-gradient: linear-gradient(135deg, #ff0055 0%, #ff3131 50%, #ff9500 100%);
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --border-color: rgba(255, 255, 255, 0.08);
+  --bg-color: #fdfaf6; /* Crema/Café muy claro, limpio y lizo */
+  --text-primary: #2c2420; /* Café chocolate profundo para lectura clara */
+  --text-secondary: #6d5d5a;
+  --brand-color: #a67c52; /* Café ambarino/Dorado */
+  --brand-gradient: linear-gradient(135deg, #a67c52 0%, #8d6e63 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(166, 124, 82, 0.15);
 }
 
 @keyframes pulse-glow {
@@ -18,10 +18,7 @@
 
 body {
   background-color: var(--bg-color);
-  /* Gradiente de iluminación de horizonte: Crea un aura en la parte superior que capta la atención al instante */
-  background-image: 
-    radial-gradient(circle at 50% -20%, #2a00ff33 0%, transparent 60%),
-    radial-gradient(circle at 50% 120%, #ff00551a 0%, transparent 60%);
+  background-image: radial-gradient(circle at top right, #fcf3e8 0%, transparent 50%);
   color: var(--text-primary);
   font-family: 'Space Grotesk', system-ui, sans-serif;
   margin: 0;
@@ -48,30 +45,9 @@ body {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 80% 20%, rgba(255, 0, 85, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(112, 0, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 80% 20%, rgba(166, 124, 82, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
   animation: pulse-glow 8s infinite ease-in-out;
-}
-
-/* Capa 2: Rejilla técnica (Dots) */
-.bg-glow::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 49, 49, 0.15) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: linear-gradient(to bottom, black, transparent, black);
-}
-
-/* Capa 3: Textura de Ruido (Grain) */
-.bg-noise {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.03;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 .container {
@@ -144,18 +120,18 @@ p {
 
 .btn-download:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(255, 0, 85, 0.5);
-  background: #ff1a66;
+  box-shadow: 0 10px 30px rgba(166, 124, 82, 0.3);
+  background: #8d6e63;
 }
 
 /* Software Preview */
 .preview-container {
   position: relative;
   margin-top: 4rem;
-  border-radius: 24px;
+  border-radius: 32px;
   padding: 8px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  background: #fff;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.08);
   overflow: hidden;
 }
 
@@ -164,7 +140,7 @@ p {
   top: 40px;
   left: 40px;
   z-index: 10;
-  background: rgba(5, 5, 8, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-top: 2px solid var(--brand-color);
@@ -172,7 +148,7 @@ p {
   border-radius: 16px;
   max-width: 240px;
   text-align: left;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 .preview-overlay h4 {
@@ -202,9 +178,9 @@ p {
 }
 
 .os-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  width: 32px;
+  height: 32px;
+  fill: var(--brand-color);
   transition: opacity 0.3s;
 }
 
@@ -212,56 +188,21 @@ p {
   opacity: 1;
 }
 
-/* Spiderweb lines decor */
-.web-line {
-  position: absolute;
-  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-  height: 1px;
-  width: 100%;
-  z-index: -1;
-}
-
 /* Stats Section */
 .tech-stats {
   display: flex;
   justify-content: space-around;
   padding: 3rem;
-  background: var(--glass-bg);
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 32px;
   margin: 4rem 0;
   border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
 }
 
 .stat-item h4 { font-size: 2.5rem; margin: 0; color: var(--brand-color); }
 .stat-item p { font-size: 0.8rem; text-transform: uppercase; color: var(--text-secondary); }
 
-/* Galería de Capturas */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin: 4rem 0;
-}
-
-.gallery-item {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-}
-
-.gallery-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.gallery-item:hover .gallery-img {
-  transform: scale(1.05);
-}
-
-/* --- Rejilla de Ingeniería (Blueprint Style) --- */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -287,7 +228,7 @@ p {
 }
 
 .feature-item:hover {
-  background: linear-gradient(to bottom, rgba(255, 0, 85, 0.05), transparent);
+  background: #fdfaf6;
 }
 
 /* Autor */
@@ -295,10 +236,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 100px;
-  background: rgba(0, 0, 0, 0.2);
+  background: #fff;
   border-radius: 40px;
   overflow: hidden;
   border: 1px solid var(--border-color);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.05);
 }
 
 .author-image-side {
@@ -320,7 +262,7 @@ p {
   flex-direction: column;
   justify-content: center;
   border-left: 1px solid var(--border-color);
-  background: radial-gradient(circle at top right, rgba(255, 49, 49, 0.03), transparent);
+  background: radial-gradient(circle at top right, rgba(166, 124, 82, 0.05), transparent);
 }
 
 .author-socials {
@@ -354,18 +296,18 @@ p {
 .showcase-row {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.01);
+  background: #fff;
   backdrop-filter: blur(5px);
   border: 1px solid var(--border-color);
   border-radius: 32px;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .showcase-row:hover {
-  border-color: rgba(255, 0, 85, 0.4);
+  border-color: var(--brand-color);
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.06);
 }
 
 .showcase-image-wrap {
@@ -387,10 +329,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: linear-gradient(to bottom, rgba(255, 49, 49, 0.02), transparent);
+  background: linear-gradient(to bottom, rgba(166, 124, 82, 0.02), transparent);
 }
-
-
 
 @media (max-width: 768px) {
   .hero-title { font-size: 3rem; }
