@@ -233,11 +233,11 @@ p {
 }
 @media (max-width: 768px) {
   .tech-stats {
-    flex-direction: column; /* Apilar en móviles */
-    align-items: center;
-    gap: 2rem;
-    padding: 2.5rem 1rem;
-    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Organización 2x2 sorprendente */
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 28px;
   }
   .stat-item { text-align: center; }
 }
@@ -461,10 +461,10 @@ p {
 }
 @media (max-width: 768px) {
   .launch-content {
-    padding: 3rem 1.5rem; /* Padding reducido */
+    padding: 3.5rem 1.5rem;
     text-align: center; /* Centrar texto */
   }
-  .launch-content h2 { font-size: 2.5rem; }
+  .launch-content h2 { font-size: 2.8rem; line-height: 1.1; }
   .launch-content .feature-label { justify-content: center; } /* Centrar label */
   .launch-content > div:last-child { /* Contenedor de svg + texto + botón */
     flex-direction: column;
@@ -487,7 +487,7 @@ p {
 @media (max-width: 768px) {
   .countdown-container {
     gap: 0.8rem; /* Menos espacio entre bloques */
-    padding: 1.5rem 1rem;
+    padding: 1.8rem 1rem;
     width: 100%; /* Ocupar todo el ancho */
     justify-content: space-around; /* Distribuir uniformemente */
     border-radius: 20px;
