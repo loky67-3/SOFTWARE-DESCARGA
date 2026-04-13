@@ -2,12 +2,12 @@
 
 :root {
   --bg-color: #fdfaf6; /* Crema/Café muy claro, limpio y lizo */
-  --text-primary: #2c2420; /* Café chocolate profundo para lectura clara */
-  --text-secondary: #6d5d5a;
-  --brand-color: #a67c52; /* Café ambarino/Dorado */
+  --text-primary: #d15416; /* Café chocolate profundo para lectura clara */
+  --text-secondary: #523d39;
+  --brand-color: #f58516; /* Café ambarino/Dorado */
   --brand-gradient: linear-gradient(135deg, #a67c52 0%, #8d6e63 100%);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(166, 124, 82, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.74);
+  --border-color: rgba(48, 47, 46, 0.15);
 }
 
 @keyframes pulse-glow {
@@ -188,18 +188,28 @@ p {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  opacity: 0.6;
 }
 
 .os-icon {
-  width: 32px;
-  height: 32px;
-  fill: var(--brand-color);
-  transition: opacity 0.3s;
+  width: 48px; /* Tamaño incrementado de 32px a 48px */
+  height: 48px;
+  transition: transform 0.3s ease, opacity 0.3s;
+  opacity: 0.8;
 }
 
 .os-icon:hover {
   opacity: 1;
+  transform: scale(1.1);
+}
+
+.os-icon.windows {
+  fill: #0078D4; /* Color oficial de Windows */
+}
+.os-icon.apple {
+  fill: #555555; /* Gris elegante para Apple */
+}
+.os-icon.linux {
+  fill: #FCC624; /* Amarillo característico de Linux (Tux) */
 }
 
 /* Stats Section */
