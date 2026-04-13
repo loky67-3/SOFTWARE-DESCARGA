@@ -62,20 +62,23 @@ function App() {
 
         {/* Cómo funciona */}
         <section className="features-grid">
-          <div className="glass-card">
+          <div className="feature-item">
+            <span className="feature-label">CORE_ENGINE // 01</span>
             <span className="card-icon">⚡</span>
-            <h3>Motor Quantum-Core</h3>
-            <p>Implementación de algoritmos de bajo nivel en Rust para garantizar un procesamiento de hilos paralelo sin bloqueos.</p>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Motor Quantum-Core</h3>
+            <p style={{ fontSize: '0.9rem' }}>Implementación de algoritmos de bajo nivel en Rust para garantizar un procesamiento de hilos paralelo sin bloqueos de memoria.</p>
           </div>
-          <div className="glass-card">
+          <div className="feature-item">
+            <span className="feature-label">PIPELINE_FLOW // 02</span>
             <span className="card-icon">🛠️</span>
-            <h3>Pipeline Automatizado</h3>
-            <p>Detección automática de hardware y optimización de registros en tiempo real. Configuración semántica inteligente.</p>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Pipeline Automatizado</h3>
+            <p style={{ fontSize: '0.9rem' }}>Detección dinámica de arquitectura y orquestación de recursos en tiempo real. Configuración semántica distribuida.</p>
           </div>
-          <div className="glass-card">
+          <div className="feature-item">
+            <span className="feature-label">SEC_PROTOCOL // 03</span>
             <span className="card-icon">🔒</span>
-            <h3>Protocolo Shard-Shield</h3>
-            <p>Encriptación de grado militar para proteger tus datos y asegurar que tu software sea siempre privado y seguro.</p>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Protocolo Shard-Shield</h3>
+            <p style={{ fontSize: '0.9rem' }}>Fragmentación de paquetes con cifrado asimétrico E2EE. Blindaje de datos mediante protocolos de seguridad redundantes.</p>
           </div>
         </section>
 
