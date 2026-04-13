@@ -208,16 +208,13 @@ p {
 }
 
 .os-icon.windows {
-  fill: #0078D4; /* Color oficial de Windows */
+  fill: #00a4ef; /* Azul oficial Windows 11 */
 }
 .os-icon.apple {
-  fill: #000000; /* Negro oficial Apple */
+  fill: #000000; /* Negro oficielo al Apple */
 }
 .os-icon.linux {
-  fill: #333333; /* Gris oscuro para el pingüino */
-}
-.os-icon.android {
-  fill: #3DDC84; /* Verde Android oficial */
+  fill: #333333; /* Gris oscuro profesional */
 }
 
 /* Stats Section */
