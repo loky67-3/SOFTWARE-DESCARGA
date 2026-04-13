@@ -246,6 +246,76 @@ p {
   .stat-item p { font-size: 0.7rem; }
 }
 
+/* Seccion de Certificados */
+.certificates-section {
+  margin: 2rem 0 4rem;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.cert-mini-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  opacity: 0.6;
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Espacio optimizado para 10 items */
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cert-item:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.cert-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cert-icon.aws { fill: #FF9900; }
+.cert-icon.google { fill: #4285F4; }
+.cert-icon.azure { fill: #0078D4; }
+.cert-icon.iso { fill: var(--brand-color); }
+.cert-icon.k8s { fill: #326CE5; }
+.cert-icon.docker { fill: #2496ED; }
+.cert-icon.rust { fill: #000000; }
+.cert-icon.terraform { fill: #7B42BC; }
+.cert-icon.mongodb { fill: #47A248; }
+.cert-icon.github { fill: #181717; }
+
+@media (max-width: 768px) {
+  .cert-grid { gap: 2rem; padding: 0 1rem; }
+  .cert-icon { width: 32px; height: 32px; }
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -418,7 +488,7 @@ p {
     grid-template-columns: 1fr; /* Apilar en móviles */
     gap: 1px; /* Gap entre bloques apilados */
   }
-  .showcase-image-wrap { height: 250px; } /* Imágenes más pequeñas */
+  .showcase-image-wrap { height: auto; aspect-ratio: 16 / 10; } /* Ajuste fluido y proporcional en móvil */
   .showcase-content { padding: 2.5rem 1.5rem; } /* Padding reducido */
 }
 
@@ -428,7 +498,6 @@ p {
   .author-content-side { padding: 3rem 2rem; border-left: none; border-top: 1px solid var(--border-color); }
   .feature-showcase { grid-template-columns: 1fr; }
   .showcase-content { padding: 3rem 1.5rem; }
-  .showcase-image-wrap { height: 300px; }
   .features-grid { grid-template-columns: 1fr; border-right: 1px solid var(--border-color); }
   .feature-item { aspect-ratio: auto; padding: 3rem 1.5rem; }
 }
@@ -458,10 +527,10 @@ p {
 }
 @media (max-width: 768px) {
   .launch-content {
-    padding: 3.5rem 1.5rem;
+    padding: 2.5rem 1rem; /* Slightly reduced padding for very small screens */
     text-align: center; /* Centrar texto */
   }
-  .launch-content h2 { font-size: 2.8rem; line-height: 1.1; }
+  .launch-content h2 { font-size: 2.2rem; line-height: 1.1; margin-bottom: 0.8rem; } /* Slightly smaller heading */
   .launch-content .feature-label { justify-content: center; } /* Centrar label */
   .launch-content > div:last-child { /* Contenedor de svg + texto + botón */
     flex-direction: column;
@@ -474,7 +543,7 @@ p {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: rgba(44, 36, 32, 0.03); /* Tono café muy sutil para el fondo del reloj */
+  background: rgba(79, 70, 229, 0.03); /* Sutil tono índigo para el fondo del reloj */
   padding: 2rem; /* Ligeramente menos padding */
   border-radius: 32px;
   border: 1px solid var(--border-color);
@@ -483,13 +552,21 @@ p {
 }
 @media (max-width: 768px) {
   .countdown-container {
-    gap: 0.8rem; /* Menos espacio entre bloques */
-    padding: 1.8rem 1rem;
+    gap: 0.8rem; /* Increased gap for better spacing */
+    padding: 1rem 0.5rem; /* Adjusted padding */
     width: 100%; /* Ocupar todo el ancho */
     justify-content: space-around; /* Distribuir uniformemente */
-    border-radius: 20px;
+    border-radius: 24px;
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Ensure items stay in one line if possible */
   }
-  .timer-block { min-width: 60px; }
+  .timer-block {
+    /* min-width: 50px; Removed to allow content to dictate width */
+    flex-shrink: 0; /* Prevent shrinking */
+    text-align: center; /* Ensure content inside is centered */
+  }
+  .timer-val { font-size: 1.6rem; } /* Slightly reduced font size */
+  .timer-divider { font-size: 1.2rem; padding-bottom: 0.8rem; } /* Adjusted font size and padding */
 }
 
 .timer-block {
@@ -500,7 +577,7 @@ p {
 }
 
 .timer-val {
-  font-size: 2.5rem; /* Más pequeño para móviles */
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--brand-color);
   font-family: 'Space Grotesk', sans-serif;
@@ -515,7 +592,7 @@ p {
   opacity: 0.6;
 }
 @media (max-width: 768px) {
-  .timer-label { font-size: 0.6rem; letter-spacing: 1px; }
+  .timer-label { font-size: 0.65rem; letter-spacing: 1px; } /* Slightly increased font size for readability */
 }
 
 
@@ -526,7 +603,7 @@ p {
   padding-bottom: 1.5rem;
 }
 @media (max-width: 768px) {
-  .timer-divider { font-size: 2rem; padding-bottom: 0.5rem; }
+  .timer-divider { font-size: 1.5rem; padding-bottom: 0.8rem; } /* Adjusted font size and padding */
 }
 
 .launch-image-wrap {
@@ -543,8 +620,12 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .launch-grid { grid-template-columns: 1fr; }
+  .launch-grid { grid-template-columns: 1fr; border-radius: 32px; }
   .launch-content { padding: 3rem 2rem; }
   .countdown-container { width: 100%; justify-content: center; }
-  .launch-image-wrap { height: 350px; }
+  .launch-image-wrap { 
+    height: auto; 
+    aspect-ratio: 16 / 10; 
+    order: -1; /* La imagen aparece arriba en móviles */
+  }
 }
