@@ -53,46 +53,6 @@ function App() {
           </div>
         </section>
 
-        {/* Global Ecosystem - Micro Icons */}
-        <section className="tech-ecosystem">
-          <span className="feature-label">RESOURCE_NETWORK // MULTI_CATEGORY</span>
-          <div className="tech-grid">
-            {/* Celulares & Tech */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#ff3131' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#00d8ff' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#10b981' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path></svg>
-            </div>
-
-            {/* Comida */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#fbbf24' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#ef4444' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 11l-5 5"></path><path d="M19 11l-4 4"></path><path d="M12 12l.01 0"></path><path d="M16 16l.01 0"></path><path d="M20 20l.01 0"></path><path d="M21 15l-3-12L3 15h18z"></path></svg>
-            </div>
-
-            {/* Ropa */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#f43f5e' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
-            </div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#a855f7' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12h-8v5c0 .5.5 1 1 1h14c.5 0 1-.5 1-1v-9c0-2-1-3.5-3-4l-5 8z"></path></svg>
-            </div>
-
-            {/* Más iconos repetidos o variados para llenar la fila de forma compacta */}
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#6366f1' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-            <div className="tech-icon-wrap" style={{ '--icon-color': '#0ea5e9' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-          </div>
-        </section>
-
-        {/* Technical Stats Section */}
-
-        {/* Technical Stats Section */}
         <section className="tech-stats">
           <div className="stat-item"><h4>0.2ms</h4><p>Latencia Base</p></div>
           <div className="stat-item"><h4>40MB</h4><p>Consumo RAM</p></div>
@@ -143,9 +103,10 @@ function App() {
           <div className="feature-item">
             <div className="tech-corner" style={{ top: 0, left: 0, borderRight: 'none', borderBottom: 'none', opacity: 0.5 }}></div>
             <span className="feature-label">CORE_ENGINE // 01</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="12" cy="12" r="10" strokeDasharray="2 2"/>
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 10V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5M6 14v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-5" />
+              <rect x="2" y="10" width="20" height="4" rx="1"/>
+              <path d="M12 10V4M12 14v6M8 10V4M16 10V4M8 14v6M16 14v6" opacity="0.3"/>
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Motor Quantum-Core</h3>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
@@ -159,10 +120,11 @@ function App() {
 
           <div className="feature-item">
             <span className="feature-label">PIPELINE_FLOW // 02</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <rect x="2" y="2" width="20" height="20" rx="2" strokeDasharray="4 2"/>
-              <path d="M7 8h10M7 12h10M7 16h10" strokeLinecap="round"/>
-              <path d="M12 2v20M2 12h20" opacity="0.3"/>
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="5" y="8" width="14" height="10" rx="2"/>
+              <circle cx="9" cy="12" r="1" fill="currentColor"/>
+              <circle cx="15" cy="12" r="1" fill="currentColor"/>
+              <path d="M12 8V4M8 4h8M9 15h6M5 15H3M21 15h-2" />
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Pipeline Automatizado</h3>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
@@ -177,9 +139,12 @@ function App() {
           <div className="feature-item">
             <div className="tech-corner" style={{ top: 0, right: 0, borderLeft: 'none', borderBottom: 'none', opacity: 0.5 }}></div>
             <span className="feature-label">SEC_PROTOCOL // 03</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M12 8v4m0 4h.01" strokeLinecap="round" strokeWidth="2"/>
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 17h12M5 17v-7l5-2 5 2v7" />
+              <path d="M15 10l5-2 2 4-5 3" />
+              <circle cx="5" cy="17" r="2"/>
+              <circle cx="12" cy="17" r="2"/>
+              <path d="M12 8V5h3" opacity="0.3"/>
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Protocolo Shard-Shield</h3>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>

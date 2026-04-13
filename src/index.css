@@ -256,25 +256,33 @@ p {
   transform: scale(1.05);
 }
 
-/* Tarjetas con Efecto Cristal */
+/* --- Rejilla de Ingeniería (Blueprint Style) --- */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 80px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 100px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
 }
 
-.glass-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--border-color);
-  padding: 2.5rem;
-  border-radius: 24px;
-  backdrop-filter: blur(12px);
-  transition: border-color 0.3s;
+.feature-item {
+  padding: 4rem 2rem;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+  background-color: transparent;
 }
 
-.glass-card:hover {
-  border-color: var(--brand-color);
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-item:hover {
+  background: rgba(255, 49, 49, 0.02);
 }
 
 /* Autor */
@@ -379,7 +387,6 @@ p {
 
 @media (max-width: 768px) {
   .hero-title { font-size: 3rem; }
-  .tech-grid { grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
   .author-split-section { grid-template-columns: 1fr; }
   .author-content-side { padding: 3rem 2rem; border-left: none; border-top: 1px solid var(--border-color); }
   .feature-showcase { grid-template-columns: 1fr; }
