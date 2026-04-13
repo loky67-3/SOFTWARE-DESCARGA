@@ -8,6 +8,13 @@
   --brand-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%); /* Degradado de Índigo a Cyan */
   --glass-bg: rgba(255, 255, 255, 0.74);
   --border-color: rgba(79, 70, 229, 0.12); /* Bordes con tinte azulado */
+
+  /* Colores para la cuadrícula de contribuciones (GitHub-like) */
+  --github-green-0: #ebedf0; /* El más claro, casi blanco */
+  --github-green-1: #9be9a8;
+  --github-green-2: #40c463;
+  --github-green-3: #30a14e;
+  --github-green-4: #216e39 ; /* El más oscuro */
 }
 
 @keyframes pulse-glow {
@@ -196,8 +203,8 @@ p {
 }
 
 .os-icon {
-  width: 48px; /* Tamaño incrementado de 32px a 48px */
-  height: 48px;
+  width: 24px; /* Tamaño reducido para una mejor integración visual */
+  height: 24px;
   transition: transform 0.3s ease, opacity 0.3s;
   opacity: 0.8;
 }
@@ -211,7 +218,7 @@ p {
   fill: #00a4ef; /* Azul oficial Windows 11 */
 }
 .os-icon.apple {
-  fill: #000000; /* Negro oficielo al Apple */
+  fill: #000000; /* Negro oficial Apple */
 }
 .os-icon.linux {
   fill: #333333; /* Gris oscuro profesional */
@@ -267,7 +274,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem; /* Espacio optimizado para 10 items */
+  gap: 2.5rem;
   flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
@@ -289,15 +296,9 @@ p {
   transform: translateY(-5px);
 }
 
-.cert-item span {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
 .cert-icon {
-  width: 40px;
-  height: 40px;
+  width: 28px; /* Tamaño optimizado para la barra de confianza */
+  height: 28px;
 }
 
 .cert-icon.aws { fill: #FF9900; }
@@ -312,8 +313,90 @@ p {
 .cert-icon.github { fill: #181717; }
 
 @media (max-width: 768px) {
-  .cert-grid { gap: 2rem; padding: 0 1rem; }
-  .cert-icon { width: 32px; height: 32px; }
+  .cert-grid { gap: 1.5rem; padding: 0 1rem; }
+  .cert-icon { width: 22px; height: 22px; }
+}
+
+/* Sección de Contribuciones (GitHub-like) */
+.github-contributions-section {
+  margin: 6rem 0;
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.github-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal si el año no cabe */
+  padding-bottom: 1rem;
+  cursor: grab;
+}
+
+.github-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.github-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.github-grid-container {
+  display: grid;
+  rid-auto-columns: 12px;
+  gap: 4px;
+  width: max-content;
+  margin: 2rem auto 0;
+  padding: 1rem;
+}
+
+.github-square {
+  width: 12px;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(27, 31, 35, 0.06);
+}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+}
+
+.github-stats-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.github-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.github-legend .github-square {
+  width: 10px;
+  height: 10px;
+}
+
+/* Niveles de color para las contribuciones */
+.github-square.level-0 { background-color: var(--github-green-0); }
+.github-square.level-1 { background-color: var(--github-green-1); }
+.github-square.level-2 { background-color: var(--github-green-2); }
+.github-square.level-3 { background-color: var(--github-green-3); }
+.github-square.level-4 { background-color: var(--github-green-4); }
+
+@media (max-width: 768px) {
+  .github-contributions-section {
+    padding: 1.5rem;
+  }
+  .github-grid-container { padding: 0.5rem; }
 }
 
 .features-grid {

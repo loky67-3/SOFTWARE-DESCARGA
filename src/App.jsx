@@ -29,6 +29,18 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  // Generar datos para la cuadrícula de contribuciones (simulando GitHub)
+  const generateContributionData = (numSquares) => {
+    const data = [];
+    for (let i = 0; i < numSquares; i++) {
+      // Asigna aleatoriamente un nivel de 0 a 4 para el color
+      const level = Math.floor(Math.random() * 5); 
+      data.push({ id: i, level: `level-${level}` });
+    }
+    return data;
+  };
+  const contributionSquares = generateContributionData(371); // 53 semanas * 7 días = 1 año completo
+
   return (
     <div className="app-wrapper">
       <div className="bg-glow"></div>
@@ -160,6 +172,33 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* GitHub-like Contributions Section */}
+        <section className="github-contributions-section">
+          <h5 className="cert-mini-title">ACTIVIDAD DE DESARROLLO</h5>
+          <div className="github-scroll-wrapper">
+            <div className="github-grid-container">
+              {contributionSquares.map(square => (
+                <div key={square.id} className={`github-square ${square.level}`}></div>
+              ))}
+            </div>
+          </div>
+          <div className="github-footer">
+            <p className="github-stats-text">
+              Más de 1,400 contribuciones en el último año.
+            </p>
+            <div className="github-legend">
+              <span>Menos</span>
+              <div className="github-square level-0"></div>
+              <div className="github-square level-1"></div>
+              <div className="github-square level-2"></div>
+              <div className="github-square level-3"></div>
+              <div className="github-square level-4"></div>
+              <span>Más</span>
+            </div>
+          </div>
+        </section>
+
 
         {/* Feature Showcase Section - Side-by-Side */}
         <section className="feature-showcase">
