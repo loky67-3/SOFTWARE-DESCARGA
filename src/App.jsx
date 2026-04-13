@@ -53,19 +53,46 @@ function App() {
           <div className="stat-item"><h4>∞</h4><p>Escalabilidad</p></div>
         </section>
 
-        {/* Galería de Imágenes de Alta Calidad */}
-        <section className="gallery-grid">
-          <div className="gallery-item">
-            <img 
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" 
-              alt="Código Limpio" className="gallery-img" 
-            />
+        {/* Feature Showcase Section */}
+        <section className="feature-showcase">
+          {/* Row 1: Development */}
+          <div className="showcase-row">
+            <div className="showcase-content">
+              <span className="feature-label">DEPLOY_READY // 04</span>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Compilación en Tiempo Real</h2>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
+                Nuestro entorno de ejecución procesa millones de líneas de código por segundo. 
+                Eliminamos los tiempos de espera mediante un sistema de caché de objetos distribuido 
+                que solo reconstruye los módulos modificados.
+              </p>
+              <div className="author-cta" style={{ margin: 0 }}>
+                <button className="btn-download" style={{ padding: '0.7rem 1.2rem', fontSize: '0.8rem' }}>Explorar SDK</button>
+              </div>
+            </div>
+            <div className="showcase-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" 
+                alt="Código Limpio" className="showcase-img" 
+              />
+            </div>
           </div>
-          <div className="gallery-item">
-            <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
-              alt="Análisis de Datos" className="gallery-img" 
-            />
+
+          {/* Row 2: Analytics */}
+          <div className="showcase-row" style={{ gridTemplateColumns: '1.2fr 0.8fr' }}>
+            <div className="showcase-image-wrap" style={{ borderRight: '1px solid var(--border-color)' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
+                alt="Análisis de Datos" className="showcase-img" 
+              />
+            </div>
+            <div className="showcase-content" style={{ borderRight: 'none' }}>
+              <span className="feature-label">DATA_ANALYSIS // 05</span>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Métricas Avanzadas</h2>
+              <p style={{ color: 'var(--text-secondary)' }}>
+                Visualiza el rendimiento de tu infraestructura con precisión de microsegundos. 
+                Nuestros dashboards integrados ofrecen telemetría de bajo nivel directamente desde el kernel.
+              </p>
+            </div>
           </div>
         </section>
 
