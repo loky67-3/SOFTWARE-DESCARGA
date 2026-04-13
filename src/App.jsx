@@ -99,39 +99,57 @@ function App() {
           </div>
         </section>
 
-        {/* Sección de Ingeniería de Características */}
+        {/* Sección de Ingeniería de Características - Blueprint Style */}
         <section className="features-grid">
           <div className="feature-item">
+            <div className="tech-corner" style={{ top: 0, left: 0, borderRight: 'none', borderBottom: 'none', opacity: 0.5 }}></div>
             <span className="feature-label">CORE_ENGINE // 01</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="12" cy="12" r="10" strokeDasharray="2 2"/>
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Motor Quantum-Core</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
               Implementación de algoritmos de bajo nivel en Rust para garantizar un procesamiento de hilos paralelo sin bloqueos de memoria.
             </p>
+            <div className="feature-metadata">
+              <span>STATUS: NOMINAL</span>
+              <span>FREQ: 5.2GHZ</span>
+            </div>
           </div>
 
           <div className="feature-item">
             <span className="feature-label">PIPELINE_FLOW // 02</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <rect x="2" y="2" width="20" height="20" rx="2" strokeDasharray="4 2"/>
+              <path d="M7 8h10M7 12h10M7 16h10" strokeLinecap="round"/>
+              <path d="M12 2v20M2 12h20" opacity="0.3"/>
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Pipeline Automatizado</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
               Detección dinámica de arquitectura y orquestación de recursos en tiempo real. Configuración semántica distribuida.
             </p>
+            <div className="feature-metadata">
+              <span>AUTO_SYNC: ON</span>
+              <span>NODE_V8</span>
+            </div>
           </div>
 
           <div className="feature-item">
+            <div className="tech-corner" style={{ top: 0, right: 0, borderLeft: 'none', borderBottom: 'none', opacity: 0.5 }}></div>
             <span className="feature-label">SEC_PROTOCOL // 03</span>
-            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 8v4m0 4h.01" strokeLinecap="round" strokeWidth="2"/>
             </svg>
             <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Protocolo Shard-Shield</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
               Fragmentación de paquetes con cifrado asimétrico E2EE. Blindaje de datos mediante protocolos de seguridad redundantes.
             </p>
+            <div className="feature-metadata">
+              <span>ENC: AES-256</span>
+              <span>KEY_AUTH: OK</span>
+            </div>
           </div>
         </section>
 
