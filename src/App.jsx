@@ -399,7 +399,7 @@ function App() {
             <h2 style={{ fontSize: '3rem', margin: '0.5rem 0 1.5rem' }}>Carlos</h2>
             <p>
               Software con una visión centrada en la eficiencia radical. 
-              He dedicado mi carrera a perfeccionar la interacción entre el hardware de alto rendimiento 
+              He dedicado  a perfeccionar la interacción entre el hardware de alto rendimiento 
               y las capas de abstracción modernas.
             </p>
             <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
