@@ -1,0 +1,185 @@
+:root {
+  --bg-color: #1b1b1f;
+  --text-primary: #ebebeb;
+  --text-secondary: rgba(235, 235, 235, 0.6);
+  --brand-color: #646cff;
+  --brand-gradient: linear-gradient(135deg, #646cff 0%, #42b883 100%);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Efecto de fondo estilo Vite */
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(100, 108, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(66, 184, 131, 0.15) 0%, transparent 40%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Secciones del Hero */
+.hero-section {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Botones Premium */
+.btn-download {
+  background: var(--brand-color);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(100, 108, 255, 0.4);
+  background: #747bff;
+}
+
+/* Software Preview */
+.preview-container {
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.preview-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Galería de Capturas */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 4rem 0;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+/* Tarjetas con Efecto Cristal */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 80px 0;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s;
+}
+
+.glass-card:hover {
+  border-color: var(--brand-color);
+}
+
+/* Autor */
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 100px;
+  padding: 3rem;
+  background: linear-gradient(to right, rgba(100, 108, 255, 0.05), transparent);
+  border-radius: 32px;
+  border: 1px solid var(--border-color);
+}
+
+.author-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--brand-color);
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; }
+  .author-card { flex-direction: column; text-align: center; gap: 1.5rem; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
