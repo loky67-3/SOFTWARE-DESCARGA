@@ -86,7 +86,7 @@ function App() {
         <section className="author-split-section">
           <div className="author-image-side">
             <img 
-              src="https://images.unsplash.com/photo-1552061376-121198535c25?q=80&w=1000&auto=format&fit=crop" 
+              src="https://img.freepik.com/fotos-premium/brazo-robotico-que-funciona-manera-compleja-sistemas-implementados-prevenir-lesiones_124507-129476.jpg" 
               alt="Arquitecto de Sistemas" 
             />
           </div>
