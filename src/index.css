@@ -378,6 +378,7 @@ p {
 
 @media (max-width: 768px) {
   .hero-title { font-size: 3rem; }
+  .tech-grid { grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
   .author-split-section { grid-template-columns: 1fr; }
   .author-content-side { padding: 3rem 2rem; border-left: none; border-top: 1px solid var(--border-color); }
   .feature-showcase { grid-template-columns: 1fr; }
